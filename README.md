@@ -5,5 +5,4 @@
 ## Технологии
 - ASP.NET Core (Razor Pages)
 - Entity Framework Core
-- PostgreSQL
 - Git / GitHub
