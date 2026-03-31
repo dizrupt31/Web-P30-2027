@@ -7,9 +7,7 @@ namespace Dive_Center.Models
         [Required(ErrorMessage = "Email обязателен")]
         [EmailAddress(ErrorMessage = "Некорректный email")]
         public string? Email { get; set; }
-
         public DateTime DateOfBirth { get; set; }
-
         public string? CertificationLevel { get; set; }
     }
 }
