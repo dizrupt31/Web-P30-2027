@@ -1,8 +1,21 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Политика конфиденциальности";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h2 class="mb-0 h4">@ViewData["Title"]</h2>
+        </div>
+        <div class="card-body">
+            <p>Данная система предназначена исключительно для внутреннего использования.</p>
+            <ul>
+                <li>Персональные данные дайверов (имена, электронные почты, даты рождения) надежно защищены.</li>
+                <li>Информация не передается третьим лицам.</li>
+                <li>Доступ к редактированию уровней сертификации имеют только авторизованные инструкторы.</li>
+            </ul>
+        </div>
+    </div>
+</div>

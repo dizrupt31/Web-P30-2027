@@ -4,10 +4,14 @@ namespace Dive_Center.Models
 {
     public class Diver : EFModel
     {
-        [Required(ErrorMessage = "Email обязателен")]
-        [EmailAddress(ErrorMessage = "Некорректный email")]
-        public string? Email { get; set; }
+        [Required(ErrorMessage = "Поле 'Email' обязательно")]
+        [EmailAddress(ErrorMessage = "Неверный формат Email")]
+        public string?Email{ get; set; }
+
+        [Required(ErrorMessage = "Укажите дату рождения")]
         public DateTime DateOfBirth { get; set; }
-        public string? CertificationLevel { get; set; }
+
+        [Required(ErrorMessage = "Укажите уровень сертификации")]
+        public string?CertificationLevel { get; set; }
     }
 }

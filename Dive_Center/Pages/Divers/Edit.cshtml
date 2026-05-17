@@ -1,5 +1,6 @@
 ﻿@page
 @model Dive_Center.Pages.Divers.EditModel
+
 @{
     ViewData["Title"] = "Редактировать дайвера";
 }
@@ -8,34 +9,51 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Diver.Id" />
-            <div class="form-group mb-2">
-                <label asp-for="Diver.Name" class="control-label"></label>
-                <input asp-for="Diver.Name" class="form-control" />
-                <span asp-validation-for="Diver.Name" class="text-danger"></span>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Diver.Id" />
+
+                    <div class="form-group mb-2">
+                        <label asp-for="Diver.Name" class="control-label"></label>
+                        <input asp-for="Diver.Name" class="form-control" />
+                        <span asp-validation-for="Diver.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label asp-for="Diver.Email" class="control-label"></label>
+                        <input asp-for="Diver.Email" class="form-control" />
+                        <span asp-validation-for="Diver.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label asp-for="Diver.DateOfBirth" class="control-label"></label>
+                        <input asp-for="Diver.DateOfBirth" class="form-control" type="date" />
+                        <span asp-validation-for="Diver.DateOfBirth" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Diver.CertificationLevel" class="control-label"></label>
+                        <select asp-for="Diver.CertificationLevel" class="form-select">
+                            <option value="">Выберите уровень...</option>
+                            <option value="Scuba Diver">Scuba Diver</option>
+                            <option value="Open Water Diver (OWD)">Open Water Diver (OWD)</option>
+                            <option value="Advanced Open Water (AOWD)">Advanced Open Water (AOWD)</option>
+                            <option value="Rescue Diver">Rescue Diver</option>
+                            <option value="Divemaster">Divemaster</option>
+                            <option value="Instructor">Instructor</option>
+                        </select>
+                        <span asp-validation-for="Diver.CertificationLevel" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Сохранить" class="btn btn-primary" />
+                        <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group mb-2">
-                <label asp-for="Diver.Email" class="control-label"></label>
-                <input asp-for="Diver.Email" class="form-control" />
-                <span asp-validation-for="Diver.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="Diver.DateOfBirth" class="control-label"></label>
-                <input asp-for="Diver.DateOfBirth" class="form-control" />
-                <span asp-validation-for="Diver.DateOfBirth" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="Diver.CertificationLevel" class="control-label"></label>
-                <input asp-for="Diver.CertificationLevel" class="form-control" />
-                <span asp-validation-for="Diver.CertificationLevel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Сохранить" class="btn btn-primary" />
-                <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
