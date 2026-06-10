@@ -1,10 +1,23 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Главная";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="card shadow border-0 text-center">
+        <div class="card-body p-5">
+            <h1 class="display-4 fw-bold mb-4">Система управления Dive Center</h1>
+            <p class="lead mb-4">
+                Добро пожаловать в панель администрирования участников дайвинг-клуба.
+            </p>
+            <hr class="my-4">
+            <p class="mb-4">
+                Здесь вы можете вести учет дайверов, управлять их контактными данными и отслеживать уровни сертификации.
+            </p>
+            <a class="btn btn-primary btn-lg" asp-area="" asp-page="/Divers/Index">
+                Перейти к списку дайверов
+            </a>
+        </div>
+    </div>
 </div>
